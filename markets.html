@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Markets — Cydah Network Services LLC</title>
+  <meta name="description" content="Low-voltage technology design for senior living, healthcare, corporate, transportation, and public safety markets in Atlanta, Georgia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .fade-in { opacity: 0; transform: translateY(18px); transition: opacity .55s ease, transform .55s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .markets-grid { display: flex; flex-direction: column; gap: 28px; }
+    .market-header-row { display: flex; align-items: flex-start; gap: 20px; margin-bottom: 24px; flex-wrap: wrap; }
+    .market-icon {
+      width: 56px; height: 56px;
+      background: rgba(139,31,31,.15);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .market-icon svg { width: 28px; height: 28px; stroke: #d44; }
+    .market-body-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    @media (max-width: 640px) { .market-body-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════ NAV ═══════════════════════════════ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"/>
+          <circle cx="12" cy="12" r="9" stroke-dasharray="4 2"/>
+          <line x1="12" y1="3" x2="12" y2="1"/>
+          <line x1="12" y1="23" x2="12" y2="21"/>
+          <line x1="3" y1="12" x2="1" y2="12"/>
+          <line x1="23" y1="12" x2="21" y2="12"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">CYDAH</span>
+        <span class="logo-sub">Network Services LLC</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="services.html">Services</a>
+      <a href="markets.html" class="active">Markets</a>
+      <a href="process.html">Our Process</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Schedule a Consultation</a>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu">
+    <a href="services.html">Services</a>
+    <a href="markets.html">Markets</a>
+    <a href="process.html">Our Process</a>
+    <a href="projects.html">Projects</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary">Schedule a Consultation</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════ PAGE HERO ═════════════════════════ -->
+<section class="page-hero">
+  <div class="bg-grid"></div>
+  <div class="container">
+    <span class="badge">Where We Work</span>
+    <h1>Markets we serve.</h1>
+    <div class="divider"></div>
+    <p>We bring deep understanding of technology requirements specific to each environment — from memory care wings to mission-critical public safety centers.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ MARKETS ═══════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="markets-grid">
+
+      <!-- 1 — Senior Living -->
+      <div class="market-block fade-in">
+        <div class="market-header-row">
+          <div class="market-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <div>
+            <span class="section-label" style="margin-bottom: 6px; display: inline-block;">Primary Market</span>
+            <h3>Senior Living &amp; Assisted Living</h3>
+          </div>
+        </div>
+        <p class="sub">Technology that supports residents, families, and staff in independent living, assisted living, and memory care communities.</p>
+        <div class="market-body-grid">
+          <ul>
+            <li>E-call / emergency call and pull-cords</li>
+            <li>Wander management and elopement prevention</li>
+            <li>Access control for perimeter, units &amp; sensitive spaces</li>
+          </ul>
+          <ul>
+            <li>Video surveillance for entries, parking and common areas</li>
+            <li>Resident-grade Wi-Fi and staff network coverage</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 2 — Healthcare -->
+      <div class="market-block fade-in">
+        <div class="market-header-row">
+          <div class="market-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+          </div>
+          <div>
+            <span class="section-label" style="margin-bottom: 6px; display: inline-block;">Primary Market</span>
+            <h3>Healthcare Facilities</h3>
+          </div>
+        </div>
+        <p class="sub">Low-voltage design for clinical environments — coordinating with owners, IT, and design teams to support hospitals, clinics, imaging suites, and medical office buildings.</p>
+        <div class="market-body-grid">
+          <ul>
+            <li>Structured cabling, MDF/IDF layouts &amp; pathways</li>
+            <li>Wi-Fi &amp; network design aligned with clinical workflows</li>
+            <li>Access control and surveillance for sensitive areas</li>
+          </ul>
+          <ul>
+            <li>Integration with hospital standards and life-safety requirements</li>
+            <li>Coordination with nurse call, RTLS and other systems (by others)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 3 — Corporate -->
+      <div class="market-block fade-in">
+        <div class="market-header-row">
+          <div class="market-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2"/>
+              <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/>
+              <line x1="12" y1="12" x2="12" y2="16"/>
+              <line x1="10" y1="14" x2="14" y2="14"/>
+            </svg>
+          </div>
+          <div>
+            <span class="section-label" style="margin-bottom: 6px; display: inline-block;">Additional Market</span>
+            <h3>Corporate / Commercial</h3>
+          </div>
+        </div>
+        <p class="sub">Low-voltage technology and cabling design integrated with corporate IT standards and enterprise environments.</p>
+        <div class="market-body-grid">
+          <ul>
+            <li>Low-voltage technology and cabling design</li>
+            <li>Network room planning and backbone coordination</li>
+          </ul>
+          <ul>
+            <li>Integration with corporate IT standards</li>
+          </ul>
+        </div>
+        <div class="ref">
+          <strong style="color: var(--gray-300);">Reference:</strong> Unum – 6 Concourse Pkwy, Suite 2700, Atlanta GA 30328
+        </div>
+      </div>
+
+      <!-- 4 — Transportation & Public Safety -->
+      <div class="market-block fade-in">
+        <div class="market-header-row">
+          <div class="market-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </div>
+          <div>
+            <span class="section-label" style="margin-bottom: 6px; display: inline-block;">Additional Market</span>
+            <h3>Transportation &amp; Public Safety</h3>
+          </div>
+        </div>
+        <p class="sub">Technology infrastructure for critical and mission-critical operations — including transportation facilities and public safety centers.</p>
+        <div class="market-body-grid">
+          <ul>
+            <li>Technology infrastructure for critical and mission-critical operations</li>
+            <li>Coordination with security and facility systems</li>
+          </ul>
+          <ul>
+            <li>Pathways and backbone support in active environments</li>
+            <li>Integration with public safety and emergency systems</li>
+          </ul>
+        </div>
+        <div class="ref">
+          <strong style="color: var(--gray-300);">References:</strong> Atlanta Airport Rental Car Center &bull; DeKalb County 911 &bull; Fulton County First Responders Center
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ CTA BANNER ════════════════════════ -->
+<section class="section cta-banner">
+  <div class="container text-center">
+    <h2>Working in one of these markets?</h2>
+    <div class="divider divider-center" style="background: rgba(255,255,255,.3);"></div>
+    <p style="max-width: 540px; margin: 0 auto 32px; font-size: 1.05rem;">Let's talk about your project. We'll follow up to discuss scope, schedule, and how low-voltage design can support your goals.</p>
+    <a href="contact.html" class="btn btn-outline-red">Schedule a Consultation</a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ FOOTER ════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <circle cx="12" cy="12" r="9" stroke-dasharray="4 2"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">CYDAH</span>
+            <span class="logo-sub">Network Services LLC</span>
+          </div>
+        </a>
+        <p>Low-voltage technology design for senior living &amp; healthcare. Based in Atlanta, GA.</p>
+        <div class="social-links" style="margin-top: 18px;">
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="Instagram">In</a>
+          <a href="#" aria-label="Facebook">Fb</a>
+          <a href="https://wa.me/14705452345" aria-label="WhatsApp">WA</a>
+        </div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <div class="footer-links">
+          <a href="services.html">Low-Voltage Systems Design</a>
+          <a href="services.html">Wi-Fi &amp; Network Design</a>
+          <a href="services.html">Security &amp; Access Control</a>
+          <a href="services.html">Emergency Call Systems</a>
+          <a href="services.html">Construction Administration</a>
+        </div>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <div class="footer-links">
+          <a href="markets.html">Markets</a>
+          <a href="process.html">Our Process</a>
+          <a href="projects.html">Projects</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <div class="footer-contact-info">
+          <a href="mailto:info@cydahtelecom.com">info@cydahtelecom.com</a>
+          <a href="tel:+14705452345">470-545-2345</a>
+          <a href="contact.html" class="btn btn-primary btn-sm" style="margin-top: 10px;">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Cydah Network Services LLC. All rights reserved.</span>
+      <span>cydahtelecom.com &mdash; Low-voltage technology design for senior living &amp; healthcare.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
