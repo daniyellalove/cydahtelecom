@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Process — Cydah Network Services LLC</title>
+  <meta name="description" content="Cydah's design process: Discovery & Planning, Design (SD, DD, CD), and Construction Administration for low-voltage technology in senior living and healthcare." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .fade-in { opacity: 0; transform: translateY(18px); transition: opacity .55s ease, transform .55s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    .process-steps { display: flex; flex-direction: column; gap: 0; }
+    .process-step {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 0;
+      position: relative;
+    }
+    .process-step + .process-step { margin-top: 0; }
+
+    .step-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 4px;
+    }
+    .step-circle {
+      width: 52px; height: 52px;
+      background: var(--red);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .88rem;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -.01em;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+    .step-line {
+      width: 2px;
+      flex: 1;
+      background: var(--border);
+      margin: 8px 0;
+      min-height: 60px;
+    }
+    .process-step:last-child .step-line { display: none; }
+
+    .step-right {
+      padding: 0 0 56px 32px;
+    }
+    .step-right h3 { color: var(--white); font-size: 1.5rem; margin-bottom: 14px; }
+    .step-right p { font-size: 1rem; max-width: 620px; line-height: 1.8; }
+    .step-right .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
+    .detail-item {
+      background: var(--mid);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+    }
+    .detail-item h4 { color: var(--white); font-size: .85rem; margin-bottom: 8px; }
+    .detail-item p { font-size: .82rem; }
+
+    @media (max-width: 768px) {
+      .process-step { grid-template-columns: 48px 1fr; }
+      .step-circle { width: 42px; height: 42px; font-size: .78rem; }
+      .step-right { padding: 0 0 40px 20px; }
+      .step-right .detail-grid { grid-template-columns: 1fr; }
+    }
+
+    .integration-bar {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 36px 40px;
+      margin-top: 0;
+    }
+    .integration-bar h3 { color: var(--white); margin-bottom: 16px; }
+    .team-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .chip {
+      background: rgba(139,31,31,.15);
+      border: 1px solid rgba(139,31,31,.3);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: .8rem;
+      font-weight: 600;
+      color: #e05555;
+      letter-spacing: .04em;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════ NAV ═══════════════════════════════ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"/>
+          <circle cx="12" cy="12" r="9" stroke-dasharray="4 2"/>
+          <line x1="12" y1="3" x2="12" y2="1"/>
+          <line x1="12" y1="23" x2="12" y2="21"/>
+          <line x1="3" y1="12" x2="1" y2="12"/>
+          <line x1="23" y1="12" x2="21" y2="12"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">CYDAH</span>
+        <span class="logo-sub">Network Services LLC</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="services.html">Services</a>
+      <a href="markets.html">Markets</a>
+      <a href="process.html" class="active">Our Process</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Schedule a Consultation</a>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu">
+    <a href="services.html">Services</a>
+    <a href="markets.html">Markets</a>
+    <a href="process.html">Our Process</a>
+    <a href="projects.html">Projects</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary">Schedule a Consultation</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════ PAGE HERO ═════════════════════════ -->
+<section class="page-hero">
+  <div class="bg-grid"></div>
+  <div class="container">
+    <span class="badge">How We Work</span>
+    <h1>A clear process from concept to closeout.</h1>
+    <div class="divider"></div>
+    <p>We integrate with your existing project team — architects, engineers, IT, and ownership — to keep low-voltage design aligned with the overall project from the first meeting to the final punchlist.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ STEPS ════════════════════════════ -->
+<section class="section">
+  <div class="container">
+
+    <!-- Team integration callout -->
+    <div class="integration-bar fade-in" style="margin-bottom: 64px;">
+      <h3>We work alongside your project team.</h3>
+      <p style="font-size: .92rem; max-width: 600px; margin-bottom: 4px;">Cydah coordinates directly with the full design and ownership team at each phase — not in isolation.</p>
+      <div class="team-chips">
+        <span class="chip">Architects</span>
+        <span class="chip">MEP Engineers</span>
+        <span class="chip">IT Departments</span>
+        <span class="chip">Ownership Groups</span>
+        <span class="chip">Project Managers</span>
+        <span class="chip">Contractors</span>
+        <span class="chip">Vendors &amp; Carriers</span>
+        <span class="chip">AHJ</span>
+      </div>
+    </div>
+
+    <div class="process-steps">
+
+      <!-- Step 01 -->
+      <div class="process-step fade-in">
+        <div class="step-left">
+          <div class="step-circle">01</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-right">
+          <span class="section-label" style="margin-bottom: 10px; display: inline-block;">Discovery &amp; Planning</span>
+          <h3>Understand your environment, goals, and constraints.</h3>
+          <p>Review program requirements, owner standards, and existing conditions to understand how technology supports operations, care models, and growth. This phase sets the foundation for all design decisions — ensuring low-voltage systems are aligned with how the facility will be operated, staffed, and experienced by residents or patients.</p>
+          <div class="detail-grid">
+            <div class="detail-item">
+              <h4>Program Review</h4>
+              <p>Owner standards, technology roadmaps, and operational requirements that shape design decisions.</p>
+            </div>
+            <div class="detail-item">
+              <h4>Existing Conditions</h4>
+              <p>Review of existing systems, infrastructure, and site constraints for additions or renovations.</p>
+            </div>
+            <div class="detail-item">
+              <h4>Team Kickoff</h4>
+              <p>Coordination with architects, MEP engineers, and IT to establish workflows and design integration points.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 02 -->
+      <div class="process-step fade-in">
+        <div class="step-left">
+          <div class="step-circle">02</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-right">
+          <span class="section-label" style="margin-bottom: 10px; display: inline-block;">Design (SD, DD, CD)</span>
+          <h3>Develop coordinated drawings ready for bidding and construction.</h3>
+          <p>Develop and refine technology drawings and documentation that integrate with architectural and MEP sets, providing coordinated information for bidding and construction. Each phase adds detail and precision — from schematic layouts to construction-ready documents with specifications, schedules, and contractor notes.</p>
+          <div class="detail-grid">
+            <div class="detail-item">
+              <h4>Schematic Design (SD)</h4>
+              <p>High-level system layouts, room layouts, and technology concepts aligned with the architectural program.</p>
+            </div>
+            <div class="detail-item">
+              <h4>Design Development (DD)</h4>
+              <p>Detailed device layouts, pathway routing, MDF/IDF planning, and coordination with other MEP disciplines.</p>
+            </div>
+            <div class="detail-item">
+              <h4>Construction Documents (CD)</h4>
+              <p>Full construction-ready drawings with notes, schedules, specifications, and contractor instructions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 03 -->
+      <div class="process-step fade-in">
+        <div class="step-left">
+          <div class="step-circle">03</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-right">
+          <span class="section-label" style="margin-bottom: 10px; display: inline-block;">Construction Support</span>
+          <h3>Stay engaged from groundbreaking to final punchlist.</h3>
+          <p>Remain engaged through construction administration to help interpret the design, respond to field questions, and verify low-voltage systems are installed as intended. Consistent CA presence ensures design intent is maintained and that field conditions or substitutions are properly evaluated before they affect the finished product.</p>
+          <div class="detail-grid">
+            <div class="detail-item">
+              <h4>Submittals &amp; Shop Drawings</h4>
+              <p>Review of contractor-submitted product data, shop drawings, and substitutions against the design intent.</p>
+            </div>
+            <div class="detail-item">
+              <h4>RFIs &amp; Field Questions</h4>
+              <p>Timely responses to requests for information from contractors and field teams during construction.</p>
+            </div>
+            <div class="detail-item">
+              <h4>Site Walks &amp; Closeout</h4>
+              <p>Site observation visits, punchlists, and review of as-built and closeout documentation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ CTA BANNER ════════════════════════ -->
+<section class="section cta-banner">
+  <div class="container text-center">
+    <h2>Let's walk through your project together.</h2>
+    <div class="divider divider-center" style="background: rgba(255,255,255,.3);"></div>
+    <p style="max-width: 520px; margin: 0 auto 32px; font-size: 1.05rem;">Whether you're at SD or already into DD, we can integrate quickly and add clear value to your team's existing process.</p>
+    <a href="contact.html" class="btn btn-outline-red">Schedule a Consultation</a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ FOOTER ════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <circle cx="12" cy="12" r="9" stroke-dasharray="4 2"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">CYDAH</span>
+            <span class="logo-sub">Network Services LLC</span>
+          </div>
+        </a>
+        <p>Low-voltage technology design for senior living &amp; healthcare. Based in Atlanta, GA.</p>
+        <div class="social-links" style="margin-top: 18px;">
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="Instagram">In</a>
+          <a href="#" aria-label="Facebook">Fb</a>
+          <a href="https://wa.me/14705452345" aria-label="WhatsApp">WA</a>
+        </div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <div class="footer-links">
+          <a href="services.html">Low-Voltage Systems Design</a>
+          <a href="services.html">Wi-Fi &amp; Network Design</a>
+          <a href="services.html">Security &amp; Access Control</a>
+          <a href="services.html">Emergency Call Systems</a>
+          <a href="services.html">Construction Administration</a>
+        </div>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <div class="footer-links">
+          <a href="markets.html">Markets</a>
+          <a href="process.html">Our Process</a>
+          <a href="projects.html">Projects</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <div class="footer-contact-info">
+          <a href="mailto:info@cydahtelecom.com">info@cydahtelecom.com</a>
+          <a href="tel:+14705452345">470-545-2345</a>
+          <a href="contact.html" class="btn btn-primary btn-sm" style="margin-top: 10px;">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Cydah Network Services LLC. All rights reserved.</span>
+      <span>cydahtelecom.com &mdash; Low-voltage technology design for senior living &amp; healthcare.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
