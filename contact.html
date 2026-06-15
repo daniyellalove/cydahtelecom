@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Cydah Network Services LLC</title>
+  <meta name="description" content="Contact Cydah Network Services LLC for low-voltage technology design inquiries. Schedule a consultation for senior living and healthcare projects in Atlanta, GA." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .fade-in { opacity: 0; transform: translateY(18px); transition: opacity .55s ease, transform .55s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 56px;
+      align-items: flex-start;
+    }
+    @media (max-width: 900px) { .contact-layout { grid-template-columns: 1fr; gap: 40px; } }
+
+    .contact-sidebar { display: flex; flex-direction: column; gap: 20px; }
+
+    .contact-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+    }
+    .contact-block h3 { color: var(--white); font-size: 1rem; margin-bottom: 18px; }
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .contact-detail:last-child { border-bottom: none; }
+    .contact-detail .icon {
+      width: 36px; height: 36px;
+      background: rgba(139,31,31,.15);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-detail .icon svg { width: 17px; height: 17px; stroke: #d44; }
+    .contact-detail .d-label { font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--gray-500); margin-bottom: 3px; }
+    .contact-detail .d-value { font-size: .92rem; color: var(--white); }
+    .contact-detail .d-value a { color: #e05555; transition: color var(--transition); }
+    .contact-detail .d-value a:hover { color: var(--red-light); }
+
+    /* Form card */
+    .form-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+    }
+    @media (max-width: 640px) { .form-card { padding: 24px; } }
+    .form-card h2 { color: var(--white); margin-bottom: 8px; font-size: 1.4rem; }
+    .form-card .form-sub { font-size: .9rem; margin-bottom: 32px; }
+    .form-fields { display: flex; flex-direction: column; gap: 20px; }
+
+    .success-msg {
+      display: none;
+      background: rgba(30,120,60,.12);
+      border: 1px solid rgba(30,120,60,.3);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      color: #5abb7a;
+      font-size: .92rem;
+      margin-top: 16px;
+    }
+
+    /* Select arrow */
+    .select-wrap { position: relative; }
+    .select-wrap::after {
+      content: '';
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0; height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 6px solid var(--gray-500);
+      pointer-events: none;
+    }
+    .select-wrap select { padding-right: 36px; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════ NAV ═══════════════════════════════ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"/>
+          <circle cx="12" cy="12" r="9" stroke-dasharray="4 2"/>
+          <line x1="12" y1="3" x2="12" y2="1"/>
+          <line x1="12" y1="23" x2="12" y2="21"/>
+          <line x1="3" y1="12" x2="1" y2="12"/>
+          <line x1="23" y1="12" x2="21" y2="12"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">CYDAH</span>
+        <span class="logo-sub">Network Services LLC</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="services.html">Services</a>
+      <a href="markets.html">Markets</a>
+      <a href="process.html">Our Process</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+    <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Schedule a Consultation</a>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu">
+    <a href="services.html">Services</a>
+    <a href="markets.html">Markets</a>
+    <a href="process.html">Our Process</a>
+    <a href="projects.html">Projects</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary">Schedule a Consultation</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════ PAGE HERO ═════════════════════════ -->
+<section class="page-hero">
+  <div class="bg-grid"></div>
+  <div class="container">
+    <span class="badge">Get in Touch</span>
+    <h1>Contact &amp; project inquiries.</h1>
+    <div class="divider"></div>
+    <p>Share a few details about your senior living or healthcare project, and we will follow up to schedule a short call to discuss scope, schedule and next steps.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ CONTACT BODY ═════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="contact-layout">
+
+      <!-- Left sidebar -->
+      <div class="contact-sidebar fade-in">
+
+        <div class="contact-block">
+          <h3>Direct contact</h3>
+          <div class="contact-detail">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div>
+              <div class="d-label">Email</div>
+              <div class="d-value"><a href="mailto:info@cydahtelecom.com">info@cydahtelecom.com</a></div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="d-label">Phone</div>
+              <div class="d-value"><a href="tel:+14705452345">470-545-2345</a></div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/>
+              </svg>
+            </div>
+            <div>
+              <div class="d-label">Website</div>
+              <div class="d-value"><a href="https://cydahtelecom.com">cydahtelecom.com</a></div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="d-label">WhatsApp</div>
+              <div class="d-value"><a href="https://wa.me/14705452345">+1 470-545-2345</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-block">
+          <h3>What to expect</h3>
+          <p style="font-size: .875rem; line-height: 1.7;">After you submit your inquiry, we'll review your project details and reach out within 1–2 business days to schedule a 30-minute call.</p>
+          <p style="font-size: .875rem; line-height: 1.7; margin-top: 12px;">That call covers: project scope and schedule, where we can add value, and how our services fit your team's existing process.</p>
+        </div>
+
+        <div class="contact-block">
+          <h3>Based in Atlanta, GA</h3>
+          <p style="font-size: .875rem; line-height: 1.7;">Serving senior living, healthcare, corporate, transportation, and public safety projects across the Atlanta metro region and beyond.</p>
+        </div>
+
+      </div>
+
+      <!-- Right: form -->
+      <div class="form-card fade-in">
+        <h2>Project inquiry</h2>
+        <p class="form-sub">Tell us about your project — location, type, schedule, and where you are in the design process.</p>
+
+        <form id="contactForm" novalidate>
+          <div class="form-fields">
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="fullName">Full Name <span style="color:#e05555;">*</span></label>
+                <input type="text" id="fullName" name="fullName" placeholder="Jane Smith" required />
+              </div>
+              <div class="form-group">
+                <label for="organization">Organization <span style="color:#e05555;">*</span></label>
+                <input type="text" id="organization" name="organization" placeholder="Owner, architect, or company name" required />
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="email">Email <span style="color:#e05555;">*</span></label>
+                <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="(404) 000-0000" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="projectType">Project Type <span style="color:#e05555;">*</span></label>
+              <div class="select-wrap">
+                <select id="projectType" name="projectType" required>
+                  <option value="" disabled selected>Select a project type…</option>
+                  <option value="senior-living">Senior Living / Assisted Living</option>
+                  <option value="healthcare">Healthcare Facility</option>
+                  <option value="corporate">Corporate / Commercial</option>
+                  <option value="transportation">Transportation Facility</option>
+                  <option value="public-safety">Public Safety / Municipal</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="projectDetails">Project Details <span style="color:#e05555;">*</span></label>
+              <textarea id="projectDetails" name="projectDetails" rows="5" placeholder="Share a brief description, location, schedule and where you are in the design process." required></textarea>
+            </div>
+
+            <label class="checkbox-group">
+              <input type="checkbox" name="scheduleConsult" id="scheduleConsult" />
+              <span>I would like to schedule a 30-minute consultation.</span>
+            </label>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 15px;">
+              Submit Inquiry
+            </button>
+
+          </div>
+        </form>
+
+        <div id="formSuccess" class="success-msg">
+          Thank you — your inquiry has been received. We'll follow up within 1–2 business days to schedule a call.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ FOOTER ════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <circle cx="12" cy="12" r="9" stroke-dasharray="4 2"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">CYDAH</span>
+            <span class="logo-sub">Network Services LLC</span>
+          </div>
+        </a>
+        <p>Low-voltage technology design for senior living &amp; healthcare. Based in Atlanta, GA.</p>
+        <div class="social-links" style="margin-top: 18px;">
+          <a href="#" aria-label="Twitter">&#120143;</a>
+          <a href="#" aria-label="Instagram">In</a>
+          <a href="#" aria-label="Facebook">Fb</a>
+          <a href="https://wa.me/14705452345" aria-label="WhatsApp">WA</a>
+        </div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <div class="footer-links">
+          <a href="services.html">Low-Voltage Systems Design</a>
+          <a href="services.html">Wi-Fi &amp; Network Design</a>
+          <a href="services.html">Security &amp; Access Control</a>
+          <a href="services.html">Emergency Call Systems</a>
+          <a href="services.html">Construction Administration</a>
+        </div>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <div class="footer-links">
+          <a href="markets.html">Markets</a>
+          <a href="process.html">Our Process</a>
+          <a href="projects.html">Projects</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <div class="footer-contact-info">
+          <a href="mailto:info@cydahtelecom.com">info@cydahtelecom.com</a>
+          <a href="tel:+14705452345">470-545-2345</a>
+          <a href="https://wa.me/14705452345">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Cydah Network Services LLC. All rights reserved.</span>
+      <span>cydahtelecom.com &mdash; Low-voltage technology design for senior living &amp; healthcare.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
