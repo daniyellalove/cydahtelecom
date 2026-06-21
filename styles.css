@@ -299,7 +299,6 @@ p  { color: var(--text-muted); line-height: 1.75; }
   transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 .card:hover {
-  border-color: var(--red);
   transform: translateY(-3px);
   box-shadow: var(--shadow-lg);
 }
@@ -433,7 +432,7 @@ p  { color: var(--text-muted); line-height: 1.75; }
   padding: 36px 32px;
   transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
-.step-card:hover { border-color: var(--red); transform: translateY(-3px); box-shadow: var(--shadow); }
+.step-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
 .step-card h3 { color: var(--charcoal); margin-bottom: 12px; }
 
 /* ── Form ───────────────────────────────────────────────── */
