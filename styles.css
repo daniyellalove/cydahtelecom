@@ -645,7 +645,7 @@ p  { color: var(--text-muted); line-height: 1.75; }
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
-  padding: 100px 0 90px;
+  padding: 50px 0 90px;
   position: relative;
 }
 .home-hero-left h1 { color: var(--charcoal); margin-bottom: 20px; }
